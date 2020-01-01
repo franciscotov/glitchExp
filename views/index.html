@@ -1,0 +1,75 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <!--<script src="/client.js" defer></script>-->
+  </head>
+  <body>
+    <header>
+      <h1>
+        API Project: Timestamp Microservice 
+      </h1>
+    </header>
+
+    <div class = "text">
+      <div class = "element">
+        <h3>
+          User Stories(WIP):
+        </h3>
+        <ol class = "items">
+          <li>The API endpoint is GET <code class = "text-code">[project_url]/api/timeset/:date_string?</code></li>
+          <br><li> 
+          A date string is valid if can be successfully parsed by <code class = "text-code">new Date(date_string)</code>.
+          <br>Note that the unix timestamp needs to be an integer (not a string) specifying milliseconds.
+          In our test we will use date strings compliant with ISO-8601 (e.g. <code>"2016-11-20"</code>) because this will ensure an UTC timestamp.
+          </li>
+          <br><li>If the date string is empty it should be equivalent to trigger <code class = "text-code">new Date()</code>, i.e. the service uses the current timestamp.
+          </li>
+          <br><li>If the date string is valid the api returns a JSON having the structure
+          <code class = "text-code">{"unix": &ltdate.getTime()&gt, "utc" : &ltdate.toUTCString()&gt }</code>
+e.g. <code class = "text-code">{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}</code></li>
+          <br><li>If the date string is invalid the api returns a JSON having the structure
+          <code class = "text-code">{"error" : "Invalid Date" }</code>.</li>
+        </ol>
+      </div>
+      <div class = "element">
+        <h3>
+          Example Usage:
+        </h3>
+        <ul>
+          <li><a href="https://nosy-pudding.glitch.me/api/timeset/2015-12-25">[project url]/api/timeset/2015-12-25</a></li>
+          <li><a href="https://nosy-pudding.glitch.me/api/timeset/1450137600000">[project url]/api/timeset/1450137600</a></li>
+        </ul>
+      </div>
+      <div class = "element">
+        <h3>
+          Example Output:
+        </h3>
+        <p><code class = "text-code">{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code></p>
+      </div>
+      
+    </div>
+
+    
+
+  </body>
+</html>

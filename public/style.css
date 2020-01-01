@@ -1,0 +1,64 @@
+/* styles */
+/* called by your view template */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: #f6f6f6;
+  text-align: center;
+  display: block;
+}
+
+h3{
+  display: block;
+  padding-top: 30px;
+}
+
+ol{
+  display: block;
+  padding-left: 70px;
+  padding-right: 40px;
+}
+.items{
+  position: relative;
+  text-align: justify;
+}
+ul{
+  list-style: none;
+}
+li{
+  margin-bottom: 0.5em;
+}
+
+.text-code{
+  background-color: white;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+div{
+  display: block;
+  background-color: lightblue;
+}
+.text{
+  width: 900px;
+  height: 100vh;
+  display:inline-block;
+  text-align: center;
+  align-self: center;
+  .element{
+    width: 900px; 
+  }
+} 
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+  display: block;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
