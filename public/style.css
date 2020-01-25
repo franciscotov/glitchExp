@@ -1,64 +1,64 @@
-/* styles */
-/* called by your view template */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: helvetica, arial, sans-serif;
-  margin: 2em;
-  background-color: #f6f6f6;
-  text-align: center;
-  display: block;
+  font-family:sans-serif;
+  margin: 25px;
+  color: #222;
+  background-color: #f5f5f5;
 }
-
-h3{
-  display: block;
-  padding-top: 30px;
-}
-
-ol{
-  display: block;
-  padding-left: 70px;
-  padding-right: 40px;
-}
-.items{
-  position: relative;
-  text-align: justify;
-}
-ul{
-  list-style: none;
-}
-li{
-  margin-bottom: 0.5em;
-}
-
-.text-code{
-  background-color: white;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-div{
-  display: block;
-  background-color: lightblue;
-}
-.text{
-  width: 900px;
-  height: 100vh;
-  display:inline-block;
-  text-align: center;
-  align-self: center;
-  .element{
-    width: 900px; 
-  }
-} 
 
 h1 {
-  font-style: italic;
-  color: #373fff;
-  display: block;
+  font-weight: bold;
+  
 }
 
 .bold {
   font-weight: bold;
 }
 
+p {
+  max-width: 900px;
+}
 
+form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #87D37C;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 5px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+input[type=submit] {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #E4F1FE;
+  border: 1px solid grey;
+  box-shadow: 2px 2px #999;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #FFFEC4;
+}
+
+code {
+  font-family: monospace;
+  font-size: 1.2em;
+  background-color: #FFFEC4;
+  padding: 2px;
+}
