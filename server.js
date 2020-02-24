@@ -1,15 +1,16 @@
-const express = require('express')
-const app = express()
-const bodyParser = require('body-parser')
-const assert =require('assert')
-const cors = require('cors')
-const shortid = require('shortid')
-const mongoose = require('mongoose')
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const assert =require('assert');
+const cors = require('cors');
+const shortid = require('shortid');
+const mongoose = require('mongoose');
+var env = require('node-env-file'); // .env file
+env(__dirname + '/.env');
 
-process.env.MONGO_URI="mongodb+srv://franciscotov:real2479@cluster0-4vicv.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(process.env.MONGO_URI , {useNewUrlParser: true, useUnifiedTopology: true})
 var Schema = mongoose.Schema;
-
+//0zakcS-y
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
